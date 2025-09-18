@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Style Hub Design System - Dark Theme with Highlighted Yellow */
+    --background: 220 15% 8%;
+    --background-alt: 220 12% 12%;
+    --foreground: 0 0% 98%;
+
+    --card: 220 12% 12%;
+    --card-foreground: 0 0% 98%;
+    --card-border: 220 8% 18%;
+
+    --popover: 220 12% 12%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Highlighted Yellow Primary */
+    --primary: 54 100% 50%;
+    --primary-foreground: 220 15% 8%;
+    --primary-glow: 54 100% 60%;
+
+    --secondary: 220 8% 18%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 220 8% 18%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 54 100% 50%;
+    --accent-foreground: 220 15% 8%;
+
+    --destructive: 0 75% 55%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 8% 18%;
+    --input: 220 8% 18%;
+    --ring: 54 100% 50%;
+
+    --radius: 16px;
+
+    /* Gradients */
+    --gradient-bg: linear-gradient(135deg, hsl(220 15% 8%) 0%, hsl(220 12% 6%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(220 12% 12%) 0%, hsl(220 8% 10%) 100%);
+    --gradient-primary: linear-gradient(135deg, hsl(54 100% 50%) 0%, hsl(54 100% 60%) 100%);
+    
+    /* Shadows */
+    --shadow-neon: 0 0 20px hsl(54 100% 50% / 0.3);
+    --shadow-card: 0 4px 20px hsl(220 15% 0% / 0.3);
+    --shadow-elevated: 0 8px 30px hsl(220 15% 0% / 0.4);
+
+    /* Animations */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-spring: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-gradient-bg text-foreground min-h-screen;
+  }
+  
+  /* Safe area for mobile */
+  .safe-area {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card border border-card-border backdrop-blur-lg shadow-card;
+  }
+  
+  .neon-glow {
+    @apply shadow-neon;
+  }
+  
+  .mobile-screen {
+    @apply min-h-screen flex flex-col max-w-md mx-auto relative;
+  }
+  
+  .bottom-nav {
+    @apply fixed bottom-0 left-1/2 transform -translate-x-1/2 w-full max-w-md bg-background-alt border-t border-card-border safe-area;
+  }
+}

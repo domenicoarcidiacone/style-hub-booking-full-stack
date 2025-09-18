@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Style Hub - Il tuo barbiere di fiducia</title>
+    <meta name="description" content="Style Hub - Prenota il tuo appuntamento dal barbiere con facilità" />
+    <meta name="author" content="Style Hub" />
+
+    <meta property="og:title" content="Style Hub - Il tuo barbiere di fiducia" />
+    <meta property="og:description" content="Style Hub - Prenota il tuo appuntamento dal barbiere con facilità" />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@stylehub" />
+    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    
+    <!-- PWA and Mobile Optimizations -->
+    <meta name="theme-color" content="#39FF14" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    
+    <style>
+      /* Prevent zoom on inputs for mobile */
+      @media screen and (max-width: 768px) {
+        input, select, textarea { font-size: 16px !important; }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
